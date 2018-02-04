@@ -4,17 +4,17 @@
 
 FROM resin/armv7hf-debian
 
-RUN apt-get update &&
+RUN apt-get update &&\
   apt-get install -y git make python-dev git-core python-virtualenv g++ crudini
 
-RUN cd ~ &&
-  git clone https://github.com/mozilla-services/syncserver &&
-  cd syncserver &&
+RUN cd ~ &&\
+  git clone https://github.com/mozilla-services/syncserver &&\
+  cd syncserver &&\
   make build
 
-RUN read -p "Enter public url: " PUB_URL &&
-  read -p "SQLAlchemy database URI: " DATABASE_URI &&
-  crudini --set --format=ini syncserver.ini syncserver public_url $PUB_URL &&
+RUN read -p "Enter public url: " PUB_URL &&\
+  read -p "SQLAlchemy database URI: " DATABASE_URI &&\
+  crudini --set --format=ini syncserver.ini syncserver public_url $PUB_URL &&\
   crudini --set --format=ini syncserver.ini syncserver sqluri $DATABASE_URI
 
 
