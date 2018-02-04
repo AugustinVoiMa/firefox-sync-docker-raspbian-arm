@@ -2,7 +2,7 @@
 #
 # https://github.com/AugustinVoiMa/firefox-sync-docker-raspbian-arm
 
-FROM resin/rpi-raspbian
+FROM resin/armv7hf-debian
 
 RUN
   apt-get update &&
