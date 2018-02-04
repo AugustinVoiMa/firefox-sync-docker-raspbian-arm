@@ -5,8 +5,8 @@
 FROM resin/rpi-raspbian
 
 RUN
-  apt update &&
-  apt install -y git make python-dev git-core python-virtualenv g++ crudini
+  apt-get update &&
+  apt-get install -y git make python-dev git-core python-virtualenv g++ crudini
 
 RUN cd ~ &&
   git clone https://github.com/mozilla-services/syncserver &&
