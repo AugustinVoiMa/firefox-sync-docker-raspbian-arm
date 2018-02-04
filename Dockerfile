@@ -4,8 +4,7 @@
 
 FROM resin/armv7hf-debian
 
-RUN
-  apt-get update &&
+RUN apt-get update &&
   apt-get install -y git make python-dev git-core python-virtualenv g++ crudini
 
 RUN cd ~ &&
