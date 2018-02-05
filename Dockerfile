@@ -2,10 +2,11 @@
 #
 # https://github.com/AugustinVoiMa/firefox-sync-docker-raspbian-arm
 
+FROM resin/armv7hf-debian
+
 LABEL maintener="augustinvoima@gmail.com"
 LABEL description=" a Docker container for Sync-1.5 Server (firefox sync) running on raspberry (armv7l) "
 
-FROM resin/armv7hf-debian
 
 RUN apt-get update &&\
   apt-get install -y git make virtualenv python python-dev git-core python-virtualenv g++ crudini &&\
