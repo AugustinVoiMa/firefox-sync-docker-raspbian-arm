@@ -14,4 +14,4 @@ RUN apt-get update &&\
 
 EXPOSE 5000
 
-ENTRYPOINT entrypoint.sh
+ENTRYPOINT /bin/bash entrypoint.sh
