@@ -11,8 +11,12 @@ LABEL description=" a Docker container for Sync-1.5 Server (firefox sync) runnin
 RUN apt-get update &&\
   apt-get install -y git make virtualenv python python-dev git-core python-virtualenv g++ crudini &&\
   cd ~ &&\
-  git clone https://github.com/mozilla-services/syncserver
+  git clone https://github.com/mozilla-services/syncserver &&\
+  cd ~/syncserver;
+  make build;
 
 EXPOSE 5000
 
-ENTRYPOINT /bin/bash entrypoint.sh
+COPY /entrypoint.sh /
+ONBUILD COPY /entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]

@@ -1,7 +1,6 @@
 #!/bin/bash
 
 cd ~/syncserver;
-make build;
 
 read -p "Enter public url: " PUB_URL;
 read -p "SQLAlchemy database URI: " DATABASE_URI;
