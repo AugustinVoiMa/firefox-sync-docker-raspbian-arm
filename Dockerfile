@@ -15,7 +15,8 @@ RUN apt-get update &&\
   cd ~/syncserver &&\
   make build
 
-EXPOSE 5000
+EXPOSE 5000/sync-1.5
+EXPOSE 3306/mysql
 
 COPY /entrypoint.sh /
 ONBUILD COPY /entrypoint.sh /entrypoint.sh
