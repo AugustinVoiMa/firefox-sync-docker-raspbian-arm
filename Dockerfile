@@ -19,4 +19,4 @@ EXPOSE 5000
 
 COPY /entrypoint.sh /
 ONBUILD COPY /entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/bin/bash","/entrypoint.sh"]
