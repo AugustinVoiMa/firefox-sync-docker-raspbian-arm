@@ -12,8 +12,8 @@ RUN apt-get update &&\
   apt-get install -y git make virtualenv python python-dev git-core python-virtualenv g++ crudini &&\
   cd ~ &&\
   git clone https://github.com/mozilla-services/syncserver &&\
-  cd ~/syncserver;
-  make build;
+  cd ~/syncserver &&\
+  make build
 
 EXPOSE 5000
 
