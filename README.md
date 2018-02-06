@@ -4,10 +4,12 @@
 -  Docker Image: https://hub.docker.com/r/augustinvm/firefox-sync-docker-raspbian-arm
 ## Instructions:
 - Pull Image from Docker hub:
-```docker pull augustinvm/firefox-sync-docker-raspbian-arm
+```
+docker pull augustinvm/firefox-sync-docker-raspbian-arm
 ```
 - Run the image:
-```docker run -it -p 5000:5000 --net="host" --name fsync augustinvoima/firefox-sync-docker-raspbian-arm
+```
+docker run -it -p 5000:5000 --net="host" --name fsync augustinvoima/firefox-sync-docker-raspbian-arm
 ```
 Don't daemonize on run, we need to set up **configuration:**
 
