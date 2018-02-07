@@ -9,4 +9,7 @@ crudini --set --format=ini syncserver.ini syncserver \
 
 crudini --set --format=ini syncserver.ini syncserver \
   sqluri $DATABASE_URI;
+
+crudini --set --format=ini syncserver.ini auth allow_new_users true;
+
 cd ~/syncserver && make serve;
