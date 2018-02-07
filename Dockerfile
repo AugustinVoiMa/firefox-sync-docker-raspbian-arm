@@ -9,7 +9,7 @@ LABEL description=" a Docker container for Sync-1.5 Server (firefox sync) runnin
 
 
 RUN apt-get update &&\
-  apt-get install -y git make virtualenv python python-dev git-core python-virtualenv g++ crudini python-mysqldb &&\
+  apt-get install -y git make virtualenv python python-dev git-core python-virtualenv g++ crudini python-mysqldb nano&&\
   cd ~ &&\
   git clone https://github.com/mozilla-services/syncserver &&\
   cd ~/syncserver &&\
