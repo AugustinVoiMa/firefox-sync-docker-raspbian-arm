@@ -15,8 +15,13 @@ RUN apt-get update &&\
   cd ~/syncserver &&\
   make build
 
+RUN apt install -y mariadb-client
+
 EXPOSE 5000
 
 COPY /entrypoint.sh /
 ONBUILD COPY /entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/bin/bash","/entrypoint.sh"]
+
+ENTRYPOINT ["/entrypoint.sh"]
+
+CMD ["serve"]
