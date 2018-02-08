@@ -25,6 +25,8 @@ crudini --set --format=ini syncserver.ini auth allow_new_users true;
 crudini --set --format=ini syncserver.ini server:main host 0.0.0.0;
 crudini --set --format=ini syncserver.ini server:main workers 2;
 
+crudini --set --format=ini syncserver.ini syncserver secret $(head -c 20 /dev/urandom | sha1sum);
+
 echo -e "Configuration ok:";
 echo -e "public Url:\t${PUB_URL-localhost}";
 echo -e "databaseURI:\t$DATABASE_URI";
